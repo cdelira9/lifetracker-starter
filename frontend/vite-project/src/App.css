@@ -1,4 +1,11 @@
-.App {
+#root {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(39, 71, 60);
+  min-height: 100vh;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -39,4 +46,4 @@
 
 button {
   font-size: calc(10px + 2vmin);
-}
+} */
