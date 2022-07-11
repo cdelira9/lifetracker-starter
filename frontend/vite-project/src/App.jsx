@@ -2,18 +2,41 @@ import { useState } from "react";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Navbar from "./components/Navbar/Navbar.jsx";
+import Activity from "./components/Activity/Activity";
+import Exercise from "./components/Exercise/Exercise";
+import Nutrition from "./components/Nutrition/Nutrition.jsx";
+import Sleep from "./components/Sleep/Sleep.jsx";
+import Home from "./components/Home/Home.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Container
+      {/* <Navbar />
+      <div className="hero-image">
+        <div className="hero-text">
+          <h1>Life Tracker</h1>
+          <p>Helping you take back control of your world</p>
+        </div>
+      </div> */}
+      {/* <Container
         maxWidth={false}
         sx={{ backgroundColor: "purple", flexGrow: 0 }}
       >
         My Container
-      </Container>
+      </Container> */}
+      <BrowserRouter>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/activity" element={<Activity />} />
+            <Route path="/exercise" element={<Exercise />} />
+            <Route path="/nutrition" element={<Nutrition />} />
+            <Route path="/sleep" element={<Sleep />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
     </>
   );
 }
