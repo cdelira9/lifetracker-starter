@@ -12,7 +12,11 @@ export default function Exercise() {
         <div className="ExerciseOverview">
           <div className="header">
             <h3>Overview</h3>
-            <button className="Button outline small outline gold ">Add Exercise</button>
+            <a href="/exercise/create">
+              <button className="Button outline small outline gold ">
+                Add Exercise
+              </button>
+            </a>
           </div>
           <div className="feed">
             <div className="empty">

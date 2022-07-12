@@ -9,12 +9,16 @@ export default function Activity() {
         <div className="actions">
           <h2 className="heading">Activity Feed</h2>
           <div className="buttons">
-            <button className="Button outline small outline gold ">
-              Add Exercise
-            </button>
-            <button className="Button outline small outline blue">
-              Log Sleep
-            </button>
+            <a href="/exercise/create">
+              <button className="Button outline small outline gold ">
+                Add Exercise
+              </button>
+            </a>
+            <a href="/sleep/create">
+              <button className="Button outline small outline blue">
+                Log Sleep
+              </button>
+            </a>
             <a href="/nutrition/create">
               <button className="Button outline small outline aqua ">
                 Record Nutrition

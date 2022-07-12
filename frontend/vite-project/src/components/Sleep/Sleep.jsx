@@ -12,9 +12,11 @@ export default function Sleep() {
         <div className="SleepOverview">
           <div className="header">
             <h3>Overview</h3>
-            <button className="Button outline small outline blue">
-              Add Sleep
-            </button>
+            <a href="/sleep/create">
+              <button className="Button outline small outline blue">
+                Add Sleep
+              </button>
+            </a>
           </div>
           <div className="feed">
             <div className="empty">

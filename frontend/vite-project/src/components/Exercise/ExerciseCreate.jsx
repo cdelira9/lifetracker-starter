@@ -1,23 +1,23 @@
 import * as React from "react";
 import Navbar from "../Navbar/Navbar.jsx";
-import "./NutritionCreate.css";
+import "./ExerciseCreate.css";
 
-export default function NutritionCreate() {
+export default function ExerciseCreate() {
   return (
-    <div className="NutritionPage">
+    <div className="ExercisePage">
       <div className="Banner">
-        <h1>Nutrition</h1>
+        <h1>Exercise</h1>
       </div>
       <div className="content">
-        <div className="NutritionNew">
-          <h2>Record Nutrition</h2>
+        <div className="ExerciseNew">
+          <h2>Add Exercise</h2>
           <div className="form">
             <div className="InputField">
               <label for="name">Name</label>
               <input
                 type="text"
                 name="name"
-                placeholder="Nutrition name"
+                placeholder="Exercise name"
               ></input>
             </div>
             <div className="InputField">
@@ -25,39 +25,30 @@ export default function NutritionCreate() {
               <input
                 type="text"
                 name="category"
-                placeholder="Nutrition category"
+                placeholder="Exercise category"
               ></input>
             </div>
             <div className="split-input-field">
               <div className="InputField">
-                <label for="quantity">Quantity</label>
+                <label for="duration">Duration (min)</label>
                 <input
                   type="number"
-                  name="calories"
+                  name="duration"
                   min="1"
                   max="100000000"
                 ></input>
               </div>
               <div className="InputField">
-                <label for="calories">Calories</label>
+                <label for="intensity">Intensity (1-10)</label>
                 <input
                   type="number"
-                  name="calories"
+                  name="intensity"
                   min="0"
-                  max="10000000000"
-                  step="10"
+                  max="10"
                 ></input>
               </div>
             </div>
-            <div className="InputField">
-              <label for="imageUrl">Image URL</label>
-              <input
-                type="text"
-                name="imageUrl"
-                placeholder="http://www.food-image.com/1"
-              />
-            </div>
-            <button className="Button primary large aqua">Save</button>
+            <button className="Button primary large gold">Save</button>
           </div>
         </div>
       </div>
