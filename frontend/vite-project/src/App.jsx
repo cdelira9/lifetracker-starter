@@ -7,6 +7,7 @@ import Exercise from "./components/Exercise/Exercise";
 import Nutrition from "./components/Nutrition/Nutrition.jsx";
 import Sleep from "./components/Sleep/Sleep.jsx";
 import Login from "./components/Login/Login.jsx";
+import NutritionCreate from "./components/Nutrition/NutritionCreate.jsx";
 import Register from "./components/Register/Register.jsx";
 import Home from "./components/Home/Home.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -39,6 +40,7 @@ function App() {
             <Route path="/sleep" element={<Sleep />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/nutrition/create" element={<NutritionCreate />}/>
           </Routes>
         </main>
       </BrowserRouter>

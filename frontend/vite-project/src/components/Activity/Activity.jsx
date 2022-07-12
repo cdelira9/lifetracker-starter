@@ -15,9 +15,11 @@ export default function Activity() {
             <button className="Button outline small outline blue">
               Log Sleep
             </button>
-            <button className="Button outline small outline aqua ">
-              Record Nutrition
-            </button>
+            <a href="/nutrition/create">
+              <button className="Button outline small outline aqua ">
+                Record Nutrition
+              </button>
+            </a>
           </div>
         </div>
         <div className="stats">
@@ -50,16 +52,16 @@ export default function Activity() {
               </div>
             </div>
             <div className="SummaryStat small orange">
-                <div className="background">
-                    <p>Avg Exercise Intensity</p>
-                    <h1>0</h1>
-                </div>
+              <div className="background">
+                <p>Avg Exercise Intensity</p>
+                <h1>0</h1>
+              </div>
             </div>
             <div className="SummaryStat small red">
-                <div className="background">
-                    <p>Total Hours Slept</p>
-                    <h1>0</h1>
-                </div>
+              <div className="background">
+                <p>Total Hours Slept</p>
+                <h1>0</h1>
+              </div>
             </div>
           </div>
         </div>
