@@ -5,7 +5,6 @@ import "./Sleep.css";
 export default function Sleep() {
   return (
     <div className="SleepPage">
-      <Navbar />
       <div className="Banner">
         <h1>Sleep</h1>
       </div>

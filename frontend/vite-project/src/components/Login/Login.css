@@ -8,6 +8,11 @@
   justify-content: center;
 }
 
+.Login, .Login .card {
+    display: flex;
+    align-items: center;
+}
+
 .Login .card {
   min-height: 600px;
   width: 520px;

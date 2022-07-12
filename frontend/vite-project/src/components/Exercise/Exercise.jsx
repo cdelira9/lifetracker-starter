@@ -5,7 +5,7 @@ import "./Exercise.css";
 export default function Exercise() {
   return (
     <div className="exercise">
-      <Navbar />
+
     </div>
   );
 }
