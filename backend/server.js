@@ -5,7 +5,7 @@ const authRoutes = require("./routes/auth");
 const { NotFoundError } = require("./utils/errors");
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(cors());
 app.use(morgan("tiny"));

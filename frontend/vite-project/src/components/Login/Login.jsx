@@ -28,41 +28,34 @@ export default function Login(props) {
   };
 
   const handleOnSubmit = async (e) => {
-    //  e.preventDefault()
+    e.preventDefault();
     setIsProcessing(true);
     setErrors((e) => ({ ...e, form: null }));
 
-    try {
-      const res = await axios.post(`http://localhost:3001/auth/login`, form);
-
-      if (res?.data) {
-        // setAppState(res.data.user.id)
-        setSessionId(res.data.user.id);
-
-        setIsProcessing(false);
-        navigate("/Activity");
-      } else {
-        setErrors((e) => ({
-          ...e,
-          form: "Invalid username/password combination",
-        }));
-        setIsProcessing(false);
-      }
-    } catch (err) {
-      console.log(err);
-      const message = err?.response?.data?.error?.message;
-      setErrors((e) => ({
-        ...e,
-        form: message ? String(message) : String(err),
-      }));
-      setIsProcessing(false);
+    const { data, error } = await apiClient.loginUser({
+      email: form.email,
+      username: form.username,
+      first_name: form.firstName,
+      last_name: form.lastName,
+      password: form.password,
+    });
+    if (error) {
+      setErrors((e) => ({ ...e, form: error }));
     }
+    if (data?.user) {
+      apiClient.setToken(data.token);
+      console.log("data", data);
+      props.setUser(data.user);
+      navigate("/activity");
+    }
+    setIsProcessing(false);
   };
 
   return (
     <div className="Login">
       <div className="card">
         <h2>Login</h2>
+        <h3 className="login-err">Login to track your lifestyle.</h3>
         {Boolean(errors.form) && <span className="error">{errors.form}</span>}
         <div className="form">
           <div className="input-field">
@@ -89,7 +82,7 @@ export default function Login(props) {
           <button
             className="btn"
             disabled={isProcessing}
-            onClick={handleOnSumbit}
+            onClick={handleOnSubmit}
           >
             {isProcessing ? "Loading..." : "Login"}
           </button>

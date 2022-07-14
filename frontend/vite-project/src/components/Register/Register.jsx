@@ -51,47 +51,28 @@ export default function Register(props) {
     setForm((f) => ({ ...f, [event.target.name]: event.target.value }));
   };
 
-  const handleOnSubmit = async () => {
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
     setIsProcessing(true);
     setErrors((e) => ({ ...e, form: null }));
 
-    if (form.passwordConfirm !== form.password) {
-      setErrors((e) => ({ ...e, passwordConfirm: "Passwords do not match." }));
-      setIsProcessing(false);
-      return;
-    } else {
-      setErrors((e) => ({ ...e, passwordConfirm: null }));
+    const { data, error } = await apiClient.loginUser({
+      email: form.email,
+      username: form.username,
+      first_name: form.firstName,
+      last_name: form.lastName,
+      password: form.password,
+    });
+    if (error) {
+      setErrors((e) => ({ ...e, form: error }));
     }
-
-    try {
-      const res = await axios.post("http://localhost:3001/auth/register", {
-        username: form.username,
-        first_name: form.firstName,
-        last_name: form.lastName,
-        email: form.email,
-        password: form.password,
-      });
-
-      if (res?.data?.user) {
-        //    setAppState(res.data);
-        setIsProcessing(false);
-        navigate("/Activity");
-      } else {
-        setErrors((e) => ({
-          ...e,
-          form: "Something went wrong with registration",
-        }));
-        setIsProcessing(false);
-      }
-    } catch (err) {
-      console.log(err);
-      const message = err?.response?.data?.error?.message;
-      setErrors((e) => ({
-        ...e,
-        form: message ? String(message) : String(err),
-      }));
-      setIsProcessing(false);
+    if (data?.user) {
+      apiClient.setToken(data.token);
+      console.log("data", data);
+      props.setUser(data.user);
+      navigate("/activity");
     }
+    setIsProcessing(false);
   };
 
   return (
