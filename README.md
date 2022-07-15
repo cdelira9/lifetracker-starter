@@ -4,7 +4,7 @@
 
 Submitted by: **Cynthia De Lira**
 
-Deployed Application: [Lifetracker Deployed Site](ADD_LINK_HERE)
+Deployed Application: [Lifetracker Deployed Site](https://giant-representative.surge.sh/)
 
 ## Application Features
 
@@ -48,15 +48,15 @@ https://www.loom.com/share/2b79616013874072b3794ddadf11217e
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-[Add your response here]
+A feature that I felt a bit unprepared to complete were the authentication and tokens since it was a topic that we recently learned therefore I still did not have a 100% understanding yet working through the project i feel more comfortable working with tokens.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-[Add your response here]
+If I had more time I would like to work on the activity page and have the total of each page show as well as work more on the css styling and change a few of the designs.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-[Add your response here]
+Throughout this project, I had a lot that did not go as plan as I often had errors where I had to debug. An example being was when I spent a long time trying to connect the backend with frontend but was able to solve it when I realized I had failed to update my table therefore the products were not being posted to the backend.
 
 ### Open-source libraries used
 
@@ -66,4 +66,4 @@ https://www.loom.com/share/2b79616013874072b3794ddadf11217e
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
-[Add your response here]
+I would like to give a shoutout to Michelle who helped me to better understand the backend as it is a topic I had trouble understand as well as Beck who helped me debug an error that I kept having.
