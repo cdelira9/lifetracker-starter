@@ -5,9 +5,9 @@ import Button from "@mui/material/Button";
 import Navbar from "../Navbar/Navbar.jsx";
 import Activity from "../Activity/Activity";
 import Nutrition from "../Nutrition/Nutrition.jsx";
-import Sleep from "../Sleep/Sleep.jsx";
+import SleepPage from "../Sleep/SleepPage.jsx";
 import Login from "../Login/Login.jsx";
-import NutritionCreate from "../Nutrition/NutritionCreate.jsx";
+import NutritionPage from "../Nutrition/NutritionPage.jsx";
 import SleepCreate from "../Sleep/SleepCreate.jsx";
 import ExercisePage from "../Exercise/ExercisePage.jsx";
 import Register from "../Register/Register.jsx";
@@ -142,7 +142,7 @@ function App() {
             <Route
               path="/nutrition"
               element={
-                <Nutrition
+                <NutritionPage
                   handleNutritonForm={handleNutritonForm}
                   addNutrition={addNutrition}
                   nutrition={nutrition}
@@ -155,7 +155,7 @@ function App() {
             <Route
               path="/sleep"
               element={
-                <Sleep
+                <SleepPage
                   addSleep={addSleep}
                   sleep={sleep}
                   user={user}
@@ -176,9 +176,9 @@ function App() {
               }
             />
             <Route
-              path="/nutrition/create"
+              path="/nutrition/*"
               element={
-                <NutritionCreate
+                <NutritionPage
                   handleNutritonForm={handleNutritonForm}
                   addNutrition={addNutrition}
                   nutrition={nutrition}
@@ -189,9 +189,9 @@ function App() {
               }
             />
             <Route
-              path="/sleep/create"
+              path="/sleep/*"
               element={
-                <SleepCreate
+                <SleepPage
                   addSleep={addSleep}
                   sleep={sleep}
                   user={user}
