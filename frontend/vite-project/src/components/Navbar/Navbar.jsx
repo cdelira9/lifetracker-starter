@@ -24,16 +24,16 @@ export default function Navbar(props) {
         </div>
         <ul className="links">
           <li>
-            <a href="/activity">Activity</a>
+            <Link  to="/activity">Activity</Link>
           </li>
           <li>
-            <a href="/exercise">Exercise</a>
+            <Link to="/exercise">Exercise</Link>
           </li>
           <li>
-            <a href="/nutrition">Nutrition</a>
+            <Link to="/nutrition">Nutrition</Link>
           </li>
           <li>
-            <a href="/sleep">Sleep</a>
+            <Link to="/sleep">Sleep</Link>
           </li>
 
           {props.user.email ? (
