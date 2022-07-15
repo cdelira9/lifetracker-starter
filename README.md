@@ -28,7 +28,7 @@ Deployed Application: [Lifetracker Deployed Site](https://giant-representative.s
 - [ ] The detailed activity should contain a form to contain relevant information. (i.e if tracking nutrition this form allows the user to capture calories, timestamp, image, category, etc.) 
 - [ ] The activity tracked should be given a unique id for easy lookup.
   `TODO://` Add link to table schema in the link code below. Your file should end in `.sql` and show your schema for the detailed activities table. (🚫 Remove this paragraph after adding schema link)
-  * [Table Schema](📝ADD LINK TO TABLE SCHEMA.sql HERE!) 
+  * [Table Schema]([📝ADD LINK TO TABLE SCHEMA.sql HERE!](https://github.com/cdelira9/lifetracker-starter/blob/main/backend/lifetracker-schema.sql)) 
 
 ### Stretch Features
 
