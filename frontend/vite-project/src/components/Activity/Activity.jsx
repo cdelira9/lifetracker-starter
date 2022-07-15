@@ -2,7 +2,7 @@ import * as React from "react";
 import Navbar from "../Navbar/Navbar.jsx";
 import "./Activity.css";
 
-export default function Activity() {
+export default function Activity(props) {
   return (
     <div className="ActivityPage">
       <div className="content">

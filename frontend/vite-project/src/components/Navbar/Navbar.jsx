@@ -6,9 +6,11 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
+import apiClient from "../../services/apiClient";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <nav className="Navbar">
       <div className="content">
@@ -33,12 +35,21 @@ export default function Navbar() {
           <li>
             <a href="/sleep">Sleep</a>
           </li>
-          <li>
-            <a href="/login">Login</a>
-          </li>
-          <li className="btn secondary">
-            <a href="/register">Sign Up</a>
-          </li>
+
+          {props.user.email ? (
+            <li className="btn">
+              <span onClick={props.handleLogout}>Logout</span>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li className="btn">
+                <Link to="/register">Sign Up</Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>

@@ -12,6 +12,7 @@ import NutritionCreate from "../Nutrition/NutritionCreate.jsx";
 import SleepCreate from "../Sleep/SleepCreate.jsx";
 import ExerciseCreate from "../Exercise/ExerciseCreate.jsx";
 import Register from "../Register/Register.jsx";
+import LoginForm from "../LoginForm/LoginForm.jsx";
 import Home from "../Home/Home.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
@@ -94,12 +95,6 @@ function App() {
 
   return (
     <>
-      <Navbar
-        handleLogout={handleLogout}
-        isLogin={isLogin}
-        user={user}
-        setUser={setUser}
-      />
       {/* <Navbar />
       <div className="hero-image">
         <div className="hero-text">
@@ -115,6 +110,12 @@ function App() {
       </Container> */}
       <BrowserRouter>
         <main>
+        <Navbar
+        handleLogout={handleLogout}
+        isLogin={isLogin}
+        user={user}
+        setUser={setUser}
+      />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
@@ -166,7 +167,7 @@ function App() {
             <Route
               path="/login"
               element={
-                <Login isLogin={isLogin} user={user} setUser={setUser} />
+                <LoginForm isLogin={isLogin} user={user} setUser={setUser} />
               }
             />
             <Route
