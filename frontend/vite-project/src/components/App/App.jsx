@@ -3,12 +3,11 @@ import { useEffect, useState } from "react";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Navbar from "../Navbar/Navbar.jsx";
-import Activity from "../Activity/Activity";
+import ActivityPage from "../Activity/ActivityPage.jsx";
 import Nutrition from "../Nutrition/Nutrition.jsx";
 import SleepPage from "../Sleep/SleepPage.jsx";
 import Login from "../Login/Login.jsx";
 import NutritionPage from "../Nutrition/NutritionPage.jsx";
-import SleepCreate from "../Sleep/SleepCreate.jsx";
 import ExercisePage from "../Exercise/ExercisePage.jsx";
 import Register from "../Register/Register.jsx";
 import LoginForm from "../LoginForm/LoginForm.jsx";
@@ -120,7 +119,7 @@ function App() {
             <Route
               path="/activity"
               element={
-                <Activity
+                <ActivityPage
                   activity={activity}
                   isLogin={isLogin}
                   user={user}
